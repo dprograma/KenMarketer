@@ -11957,7 +11957,7 @@ window.Vue = __webpack_require__(9);
 
 
 
-vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
 
 /**
  * The following block of code may be used to automatically register your
@@ -11981,9 +11981,11 @@ vue.use(__WEBPACK_IMPORTED_MODULE_0_buefy___default.a);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-//const app = new Vue({
-//    el: '#app'
-//});
+$(document).ready(function () {
+  $(".dropdown").hover(function (e) {
+    $(this).toggleClass("is-open");
+  });
+});
 
 /***/ }),
 /* 12 */

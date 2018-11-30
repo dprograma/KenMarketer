@@ -11,7 +11,9 @@ window.Vue = require('vue');
 
 import Buefy from 'buefy';
 
-vue.use(Buefy);
+Vue.use(Buefy);
+
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -35,6 +37,9 @@ vue.use(Buefy);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-//const app = new Vue({
-//    el: '#app'
-//});
+
+$(document).ready(function() {
+	$(".dropdown").hover(function(e) {
+		$(this).toggleClass("is-open");
+	});
+});
