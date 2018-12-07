@@ -25,28 +25,6 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('scripts')
-    @section('scripts')
-      <script>
-        var app = new Vue({
-          el: '#app',
-          data: {
-            permissionType: 'crud',
-            resource: '',
-            crudSelected: ['create', 'read', 'update', 'delete']
-          },
-          methods: {
-            crudName: function(item) {
-              return item.substr(0,1).toUpperCase() + item.substr(1) + " " + app.resource.substr(0,1).toUpperCase() + app.resource.substr(1);
-            },
-            crudSlug: function(item) {
-              return item.toLowerCase() + "-" + app.resource.toLowerCase();
-            },
-            crudDescription: function(item) {
-              return "Allow a User to " + item.toUpperCase() + " a " + app.resource.substr(0,1).toUpperCase() + app.resource.substr(1);
-            }
-          }
-        });
-      </script>
-    @endsection
+
 </body>
 </html>
